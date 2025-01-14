@@ -10,7 +10,7 @@ jobs:
     - name: checkout
       uses: actions/checkout@v4
     - name: build image
-      run: docker build . -t rajendra7406/cat-core-db:latest
+      run: docker build ./ -t rajendra7406/cat-core-db:latest
     - name: push to docker hub
       run: |
         docker login -u rajendra7406 -p ${{ secrets.DOCKER_PASSWORD }}
