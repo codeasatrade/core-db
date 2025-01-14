@@ -13,5 +13,5 @@ jobs:
       run: docker build ./ -t rajendra7406/cat-core-db:latest
     - name: push to docker hub
       run: |
-        docker login -u rajendra7406 -p ${{ secrets.DOCKER_PASSWORD }}
+        docker login -u rajendra7406 -p ${{ secrets.DOCKER_ACCESS_TOKEN_90 }}
         docker push rajendra7406/cat-core-db:latest
