@@ -2,14 +2,13 @@ name: Publish PostgreSQL Docker Image
 
 on:
   push:
-  workflow_dispatch:
 
 jobs:
-  publish_db_image:
+  publish_images:
     runs-on: ubuntu-latest
     steps:
     - name: checkout
-    - uses: actions/checkout@v4
+      uses: actions/checkout@v4
     - name: build image
       run: docker build . -t rajendra7406/cat-core-db:latest
     - name: push to docker hub
