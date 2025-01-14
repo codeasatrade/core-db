@@ -3,6 +3,7 @@
 -- Drop table
 
 -- DROP TABLE challenges;
+DROP DATABASE IF EXISTS core_db;
 
 CREATE DATABASE core_db;
 \c core_db;
