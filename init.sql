@@ -2,13 +2,10 @@
 
 -- Drop table
 
--- DROP TABLE challenges;
-DROP DATABASE IF EXISTS core_db;
-
-CREATE DATABASE core_db;
+CREATE DATABASE IF NOT EXISTS  core_db;
 \c core_db;
 
-CREATE SCHEMA challenges_schema;
+CREATE SCHEMA IF NOT EXISTS challenges_schema;
 
 SET search_path TO challenges_schema;
 
