@@ -4,8 +4,8 @@
 
 -- DROP TABLE challenges;
 
-CREATE DATABASE core-db;
-\c core-db;
+CREATE DATABASE core_db;
+\c core_db;
 
 CREATE SCHEMA challenges_schema;
 

@@ -7,7 +7,7 @@ services:
     environment:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: admin
-      POSTGRES_DB: core-db
+      POSTGRES_DB: core_db
     volumes:
       - postgres_data:/var/lib/postgresql/data
 
