@@ -1,0 +1,17 @@
+name: Publish PostgreSQL Docker Image
+
+on: 
+  workflow_dispatch:
+
+jobs:
+  publish_images:
+    runs-on: ubuntu-latest
+    steps:
+    - name: checkout
+      uses: actions/checkout@v4
+    - name: build image
+      run: docker build ./ -t rajendra7406/cat-core-db:latest
+    - name: push to docker hub
+      run: |
+        docker login -u rajendra7406 -p ${{ secrets.DOCKER_ACCESS_TOKEN_90 }}
+        docker push rajendra7406/cat-core-db:latest
