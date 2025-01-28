@@ -2,14 +2,14 @@
 
 -- Drop table
 
-CREATE DATABASE IF NOT EXISTS  core_db;
+CREATE DATABASE core_db;
 \c core_db;
 
-CREATE SCHEMA IF NOT EXISTS challenges_schema;
+CREATE SCHEMA challenges_schema;
 
 SET search_path TO challenges_schema;
 
-CREATE TABLE IF NOT EXISTS challenges (
+CREATE TABLE challenges (
 	id serial4 NOT NULL,
 	"name" varchar(50) NOT NULL,
 	description text NULL,
