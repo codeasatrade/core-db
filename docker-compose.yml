@@ -10,7 +10,14 @@ services:
       POSTGRES_DB: core_db
     volumes:
       - postgres_data:/var/lib/postgresql/data
+    networks:
+      cat-network: 192.168.1.100 # You may need to change this IP address
+        
 
 volumes:
   postgres_data:
     driver: local
+
+networks:
+  cat-network:
+    external: true
