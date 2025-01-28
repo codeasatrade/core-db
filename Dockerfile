@@ -5,7 +5,7 @@ LABEL authors="Raj"
 # Set the environment variables for PostgreSQL
 ENV POSTGRES_USER=postgres
 ENV POSTGRES_PASSWORD=admin
-ENV POSTGRES_DB=core_db
+# ENV POSTGRES_DB=core_db
 
 # Copy the SQL script into the Docker container
 COPY init.sql /docker-entrypoint-initdb.d/
